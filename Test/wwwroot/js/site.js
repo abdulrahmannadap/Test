@@ -5,8 +5,23 @@
 const hamBurger = document.querySelector(".toggle-btn");
 
 hamBurger.addEventListener("click", function () {
-    document.querySelector("#sidebar").classList.toggle("expand");
+    const sidebar = document.querySelector("#sidebar");
+    const toggleIcon = this.querySelector("i"); // Select the icon inside the button
+
+    // Toggle the sidebar's expand class
+    sidebar.classList.toggle("expand");
+
+    // Change the icon based on the sidebar state
+    if (sidebar.classList.contains("expand")) {
+        toggleIcon.classList.remove("bi-text-indent-left");
+        toggleIcon.classList.add("bi-text-indent-right");
+      
+    } else {
+        toggleIcon.classList.remove("bi-text-indent-right");
+        toggleIcon.classList.add("bi-text-indent-left");
+    }
 });
+
 
 
 

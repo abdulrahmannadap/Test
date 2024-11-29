@@ -14,13 +14,46 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     @* Data Table Link *@
     <link href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css" rel="stylesheet" />
+
+  
 </head>
 <body>
+    <header>
+        @*  navbar-light bg-white style="background-image: linear-gradient(195deg, #42424a 100%, #191919 50%);" *@
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-3" >
+            <div class="container-fluid" style="margin-left: 210px !important;">
+                <button class="toggle-btn" type="button">
+                    <i class="bi bi-text-indent-left"></i>
+                </button>
+
+                @* <i class="bi bi-text-indent-right"></i> *@
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Tabel</a>
+                        </li>
+
+
+                    </ul>
+
+                    <!-- Logout Button -->
+                    <button class="logoutbtn btn btn-primary" type="button">
+                        <span class="bi bi-box-arrow-right"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
     <div class="wrapper">
+ 
         <aside id="sidebar">
             <div class="d-flex">
                
-                    <img src="~/logo.png" class="sidebar-logo" />
+           
           
             </div>
             <ul class="sidebar-nav">
@@ -98,34 +131,7 @@
         </aside>
 
         <div class="main">
-            <header>
-                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                    <div class="container-fluid">
-                        <button class="toggle-btn" type="button">
-                            <span class="bi bi-text-indent-right"></span>
-                        </button>
-                        @* <i class="bi bi-text-indent-right"></i> *@
-
-                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                            <ul class="navbar-nav flex-grow-1">
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Tabel</a>
-                                </li>
-
-                          
-                            </ul>
-
-                            <!-- Logout Button -->
-                            <button class="logoutbtn btn btn-primary" type="button">
-                                <span class="bi bi-box-arrow-right"></span>
-                            </button>
-                        </div>
-                    </div>
-                </nav>
-            </header>
+        
 
             <div class="text-center">
                 <main role="main" class="pb-3 p-2">

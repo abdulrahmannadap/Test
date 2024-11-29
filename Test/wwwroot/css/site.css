@@ -53,6 +53,7 @@ body {
 
 .wrapper {
     display: flex;
+    margin-top: -16px;
 }
 
 .main {
@@ -67,42 +68,34 @@ body {
         font-size: 1.5rem;
         
     }*/
-#sidebar {
-    width: 70px;
-    min-width: 70px;
-    z-index: 1000;
-    transition: all .25s ease-in-out;
-    /*  background-color: #0e2238;*/
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .16);
-    background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);
-    /*background-color: #0f172a !important;*/
-}
 
-    #sidebar.expand {
-        width: 260px;
-      /*  min-width: 260px;*/
-    }
 
 .toggle-btn {
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
     font-size: var(--bs-navbar-toggler-font-size);
-    /* line-height: 1;
-    color: var(--bs-navbar-color);*/
     color: black;
     background-color: transparent;
     border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
     border-radius: var(--bs-navbar-toggler-border-radius);
     transition: var(--bs-navbar-toggler-transition);
-    /* line-height: 1; */
-    /* color: var(--bs-navbar-color);
-    /* padding: 1rem 1.5rem;*/
 }
-    /* Optional: Add transitions if you want a smooth change */
+
     .toggle-btn i {
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
+
+
+.logoutbtn {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    color: black;
+    background-color: transparent;
+    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+}
+
+
 
 .sidebar-logo {
     margin: auto 0;
@@ -115,6 +108,27 @@ body {
         color: #FFF;
         font-size: 1.15rem;
         font-weight: 600;
+    }
+
+
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .50s ease-in-out;
+    /*  background-color: #0e2238;*/
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .16);
+/*    background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);*/
+    /*background-color: #0f172a !important;*/
+    border-radius: 5px 5px 0px 0px;
+    margin-top: 8px;
+}
+
+    #sidebar.expand {
+        width: 260px;
+        /*  min-width: 260px;*/
     }
 
 #sidebar:not(.expand) .sidebar-logo,
@@ -133,7 +147,7 @@ body {
     padding: 0rem 0px; /* Default padding when the sidebar is open */
     flex: 1 1 auto;
     transition: padding 0.3s ease; /* Add transition for smooth effect */
-
+    margin-top: 3px;
 }
 
     /*.sidebar-nav.closed {
@@ -143,11 +157,12 @@ body {
 
 a.sidebar-link {
     padding: .625rem 0.9rem;
-    color: #FFF;
+    /*    color: #FFF;*/
     display: block;
     /* font-size: 0.9rem;*/
     white-space: nowrap;
     border-left: 3px solid transparent;
+    color: #000000;
 }
 
 .sidebar-link i {
@@ -171,18 +186,21 @@ a.sidebar-link:hover {
     top: 0;
     left: 70px;
     /* background-color: #0e2238;*/
-    background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);
+    /*    background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);*/
+     background-color: #ffffff;
     padding: 0;
     min-width: 15rem;
     display: none;
 }
 
-#sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown {
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown  {
     display: block;
     max-height: 15em;
     width: 100%;
-    opacity: 1;
+    opacity: 10;
 }
+
+
 
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
     border: solid;
@@ -199,18 +217,5 @@ a.sidebar-link:hover {
 
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
     transform: rotate(45deg);
-    transition: all .2s ease-out;
+    transition: all .10s ease-out;
 }
-.logoutbtn {
-    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
-    font-size: var(--bs-navbar-toggler-font-size);
-    /* line-height: 1;
-    color: var(--bs-navbar-color);*/
-    color: black;
-    background-color: transparent;
-    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
-    border-radius: var(--bs-navbar-toggler-border-radius);
-    transition: var(--bs-navbar-toggler-transition);
-    
-}
-
