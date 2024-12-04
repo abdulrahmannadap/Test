@@ -77,11 +77,19 @@
                     </a>
                     <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Login</a>
+                            <a class="sidebar-link #" asp-area="" asp-controller="Home" asp-action="Index">Login</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Register</a>
+                            <a class="sidebar-link">Register</a>
                         </li>
+
+                   
+                        <li class="sidebar-item"><a class="sidebar-link" asp-area="UserArea" asp-controller="InvActivityLocations" asp-action="Index">Activity Locations</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" asp-area="UserArea" asp-controller="InvLineMasters" asp-action="Index">Shipping Line</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" asp-area="UserArea" asp-controller="InvBillingLocations" asp-action="Index">Billing Location (Seller)</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" asp-area="UserArea" asp-controller="InvProductDescriptions" asp-action="Index">Product Descr</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" asp-area="UserArea" asp-controller="InvInvoiceEdiCodes" asp-action="Index">Invoice EDI</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" asp-area="AdminArea" asp-controller="CompaniesAdmin" asp-action="Index">Company</a></li>
                     </ul>
                 </li>
 
@@ -97,7 +105,7 @@
                                data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
                                 Two Links
                             </a>
-                            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
+                            <ul id="multi-two" data-bs-parent="#sidebar" class="sidebar-dropdown list-unstyled collapse">
                                 <li class="sidebar-item">
                                     <a href="#" class="sidebar-link">Link 1</a>
                                 </li>
