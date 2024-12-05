@@ -73,7 +73,7 @@ body {
 .toggle-btn {
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
     font-size: var(--bs-navbar-toggler-font-size);
-    color: black;
+    color: #fff;
     background-color: transparent;
     border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
     border-radius: var(--bs-navbar-toggler-border-radius);
@@ -88,7 +88,7 @@ body {
 .logoutbtn {
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
     font-size: var(--bs-navbar-toggler-font-size);
-    color: black;
+    color: #fff;
     background-color: transparent;
     border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
     border-radius: var(--bs-navbar-toggler-border-radius);
@@ -112,18 +112,32 @@ body {
 
 
 #sidebar {
+    /*width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .50s ease-in-out;*/
+    /*  background-color: #0e2238;*/
+    /*display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .16);*/
+    /*    background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);*/
+    /*background-color: #0f172a !important;*/
+    /*border-radius: 5px 5px 0px 0px;
+    margin-top: 8px;*/
     width: 70px;
     min-width: 70px;
     z-index: 1000;
-    transition: all .50s ease-in-out;
-    /*  background-color: #0e2238;*/
+    /* transition: all .50s ease-in-out; */
+    /* background-color: #0e2238; */
     display: flex;
     flex-direction: column;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .16);
-/*    background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);*/
-    /*background-color: #0f172a !important;*/
-    border-radius: 5px 5px 0px 0px;
+    /* box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .16); */
+    /* background-image: linear-gradient(195deg, #42424a 0%, #191919 100%); */
+    /* background-color: #0f172a !important; */
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #ccd4de;
     margin-top: 8px;
+    margin-bottom: 8px;
 }
 
     #sidebar.expand {
@@ -207,12 +221,13 @@ a.sidebar-link:hover {
     display: none;
 }
 
-#sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown  {
-    display: block;
-    max-height: 15em;
-    width: 100%;
-    opacity: 10;
-}
+    #sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown {
+        display: block;
+        max-height: 30em;
+        width: 100%;
+        opacity: 10;
+        background: white;
+    }
 
 
 
@@ -231,7 +246,7 @@ a.sidebar-link:hover {
 
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
     transform: rotate(45deg);
-    transition: all .10s ease-out;
+    transition: all .10s ease-out !important;
 }
 
 
@@ -242,7 +257,6 @@ a.sidebar-link:hover {
     -webkit-background-clip: text; /* For Chrome and Safari */
     background-clip: text;
     color: transparent; /* Make the text transparent so the gradient shows */
-    display: inline-block;
 
     transition: color 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth transition on hover */
 }
@@ -254,4 +268,20 @@ a.sidebar-link:hover {
 }
 #sidebar a.active i {
     color: black; /* Change the icon color to black on hover */
+}
+
+
+
+img, svg {
+    height: 37px;
+    margin-bottom: -5px;
+    margin-left: 20px;
+}
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 768px) {
+    img, svg {
+        margin-left: 115px;
+        margin-bottom: -35px;
+    }
 }
